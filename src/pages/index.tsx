@@ -12,11 +12,7 @@ const Home: NextPage = () => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c]">
-				<div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
-					<div className="flex flex-col items-center gap-2">
-						<AuthShowcase />
-					</div>
-				</div>
+				<AuthShowcase />
 			</main>
 		</>
 	);
@@ -29,22 +25,22 @@ const AuthShowcase: React.FC = () => {
 
 	return (
 		<div className="flex flex-col items-center justify-center gap-4">
-			<p className="text-center text-2xl text-white">
-				{sessionData && (
-					<div className="flex items-center justify-center gap-4">
-						<span>Logged in as {sessionData.user?.name}</span>
+			{sessionData && (
+				<div className="flex items-center justify-center gap-4">
+					<span className="text-center text-2xl text-white">
+						Logged in as {sessionData.user?.name}
+					</span>
 
-						{sessionData.user?.image && (
-							// eslint-disable-next-line @next/next/no-img-element
-							<img
-								src={sessionData.user?.image}
-								alt="user image"
-								className="h-12 w-12 rounded-full border border-white text-sm"
-							/>
-						)}
-					</div>
-				)}
-			</p>
+					{sessionData.user?.image && (
+						// eslint-disable-next-line @next/next/no-img-element
+						<img
+							src={sessionData.user?.image}
+							alt="user image"
+							className="h-12 w-12 rounded-full border border-white text-sm"
+						/>
+					)}
+				</div>
+			)}
 			{sessionData ? (
 				<button
 					className="rounded-lg bg-white px-10 py-3 font-semibold text-red-400 no-underline transition duration-200 ease-in-out hover:bg-[#5865f2] hover:text-white"
