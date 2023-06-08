@@ -1,6 +1,5 @@
 import { type NextPage } from "next";
 import Head from "next/head";
-import Navbar from "~/components/Navbar";
 
 const Home: NextPage = () => {
 	return (
@@ -11,9 +10,29 @@ const Home: NextPage = () => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<main className="min-h-screen">
-				<Navbar />
+				<div className="container mx-auto">
+					<Hero />
+				</div>
 			</main>
 		</>
+	);
+};
+
+const Hero = () => {
+	return (
+		<div className="hero py-40">
+			<div className="hero-content text-center">
+				<div className="max-w-md">
+					<h1 className="text-5xl font-bold">Hello there</h1>
+					<p className="py-6">
+						Provident cupiditate voluptatem et in. Quaerat fugiat ut
+						assumenda excepturi exercitationem quasi. In deleniti
+						eaque aut repudiandae et a id nisi.
+					</p>
+					<button className="btn-primary btn">Get Started</button>
+				</div>
+			</div>
+		</div>
 	);
 };
 
