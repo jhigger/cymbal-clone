@@ -43,13 +43,16 @@ const Hero = () => {
 		<div className="hero py-40">
 			<div className="hero-content text-center">
 				<div className="max-w-md">
-					<h1 className="text-5xl font-bold">Hello there</h1>
+					<h1 className="text-5xl font-bold">
+						Supercharge your Discord server
+					</h1>
 					<p className="py-6">
-						Provident cupiditate voluptatem et in. Quaerat fugiat ut
-						assumenda excepturi exercitationem quasi. In deleniti
-						eaque aut repudiandae et a id nisi.
+						Real-time NFT sales in your Discord server — all for
+						free.
 					</p>
-					<button className="btn-primary btn">Get Started</button>
+					<button className="btn-accent btn-outline btn rounded-full">
+						Setup Cymbal Bot
+					</button>
 				</div>
 			</div>
 		</div>
