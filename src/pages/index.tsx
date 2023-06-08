@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { type NextPage } from "next";
 import Head from "next/head";
 
@@ -10,8 +11,27 @@ const Home: NextPage = () => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<main className="min-h-screen">
-				<div className="container mx-auto">
+				<div className="container mx-auto flex flex-col items-center justify-center p-4">
 					<Hero />
+					<div className="card bg-base-100 shadow-2xl lg:card-side lg:max-w-[733px]">
+						<div className="card-body">
+							<h2 className="card-title">Step 1</h2>
+							<p>
+								Add Cymbal Bot to your server by logging in with
+								your Discord account.
+							</p>
+						</div>
+						<figure className="overflow-visible bg-indigo-500">
+							<div className="flex h-40 w-80 items-center justify-center">
+								<a
+									className="btn rounded-full border-0 bg-white px-8 normal-case text-indigo-500 hover:bg-indigo-600 hover:text-white"
+									href="#"
+								>
+									Sign in with Discord
+								</a>
+							</div>
+						</figure>
+					</div>
 				</div>
 			</main>
 		</>
