@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import { signIn, signOut, useSession } from "next-auth/react";
-import React from "react";
 import { RiDiscordFill } from "react-icons/ri";
 
 const Navbar = () => {
@@ -57,7 +56,11 @@ const DiscordSignInButton = () => {
 	return (
 		<button
 			className="btn bg-[#5865f2] text-white hover:bg-[#3c45a5]"
-			onClick={() => void signIn("discord")}
+			onClick={() =>
+				void signIn("discord", {
+					callbackUrl: "/",
+				})
+			}
 		>
 			<RiDiscordFill size={24} />
 			<span className="flex-grow">Sign in with Discord</span>
