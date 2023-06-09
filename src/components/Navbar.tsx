@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { signIn, signOut, useSession } from "next-auth/react";
+import Link from "next/link";
 import { RiDiscordFill } from "react-icons/ri";
 
 const Navbar = () => {
@@ -8,11 +9,11 @@ const Navbar = () => {
 	return (
 		<div className="navbar bg-base-100 p-6">
 			<div className="container mx-auto flex justify-between">
-				<div>LOGO</div>
+				<Link href="/">LOGO</Link>
 				{sessionData ? (
 					<div className="flex items-center gap-4">
 						<p className="text-center text-white">
-							Logged in as {sessionData.user.name}
+							{sessionData.user.name}
 						</p>
 						<div className="dropdown-end dropdown">
 							<label
