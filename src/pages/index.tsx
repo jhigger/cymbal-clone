@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import { type NextPage } from "next";
 import Head from "next/head";
-import { FaDiscord, FaFacebookF, FaTwitter } from "react-icons/fa";
 import Cards from "~/components/Cards";
+import Footer from "~/components/Footer";
 
 const Home: NextPage = () => {
 	return (
@@ -22,26 +22,7 @@ const Home: NextPage = () => {
 					>
 						Grab Your Free Sales Bot
 					</a>
-					<footer className="footer footer-center rounded p-10 pb-20 text-base-content">
-						<div>
-							<div className="grid grid-flow-col gap-4">
-								<a>
-									<FaTwitter size={24} />
-								</a>
-								<a>
-									<FaDiscord size={24} />
-								</a>
-								<a>
-									<FaFacebookF size={24} />
-								</a>
-							</div>
-						</div>
-						<div>
-							<p>
-								Copyright © 2023 - All right reserved by Kairos
-							</p>
-						</div>
-					</footer>
+					<Footer />
 				</div>
 			</main>
 		</>
